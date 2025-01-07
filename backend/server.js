@@ -6,7 +6,13 @@ const app = express();
 const PORT = 5000;
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: 'https://crm-frontend-tau-six.vercel.app',  // Your actual frontend deployment URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+}));
+
 app.use(bodyParser.json());
 
 // Route
