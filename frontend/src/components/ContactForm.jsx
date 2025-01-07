@@ -16,7 +16,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/submit', formData);
+      const response = await axios.post('https://vercel-learn-backend.vercel.app/submit', formData);
       setResponseMessage(response.data.message);
     } catch (error) {
       setResponseMessage('Something went wrong. Please try again.');
