@@ -15,6 +15,11 @@ app.use(cors({
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Simple Express Backend!');
+});
+
+
 // Route
 app.post('/submit', (req, res) => {
   const { name, message } = req.body;
